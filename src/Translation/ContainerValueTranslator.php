@@ -16,8 +16,8 @@ use Wikibase\DataModel\Statement\Statement;
 
 class ContainerValueTranslator {
 
-	private DataValueTranslator $dataValueTranslator;
-	private MonoTextTranslator $monoTextTranslator;
+	private $dataValueTranslator;
+	private $monoTextTranslator;
 
 	public function __construct( DataValueTranslator $dataValueTranslator, MonoTextTranslator $monoTextTranslator ) {
 		$this->dataValueTranslator = $dataValueTranslator;

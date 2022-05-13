@@ -13,7 +13,7 @@ use Wikibase\DataModel\Term\TermList;
 
 class FingerprintTranslator {
 
-	private TermTranslator $termTranslator;
+	private $termTranslator;
 
 	public function __construct( TermTranslator $termTranslator ) {
 		$this->termTranslator = $termTranslator;

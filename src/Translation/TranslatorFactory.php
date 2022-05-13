@@ -10,8 +10,8 @@ use Wikibase\DataModel\Services\Lookup\PropertyDataTypeLookup;
 
 class TranslatorFactory {
 
-	private DataValueFactory $dataValueFactory;
-	private PropertyDataTypeLookup $propertyTypeLookup;
+	private $dataValueFactory;
+	private $propertyTypeLookup;
 
 	public function __construct( DataValueFactory $dataValueFactory, PropertyDataTypeLookup $propertyTypeLookup ) {
 		$this->dataValueFactory = $dataValueFactory;

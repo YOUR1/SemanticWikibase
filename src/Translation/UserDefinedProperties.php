@@ -13,13 +13,13 @@ use Wikimedia\Rdbms\DBError;
 
 class UserDefinedProperties {
 
-	private PropertyInfoLookup $propertyInfoLookup;
-	private PropertyTypeTranslator $propertyTypeTranslator;
-	private TermLookup $termLookup;
-	private string $labelLanguageCode;
+	private $propertyInfoLookup;
+	private $propertyTypeTranslator;
+	private $termLookup;
+	private $labelLanguageCode;
 
 	public function __construct( PropertyInfoLookup $propertyInfoLookup, PropertyTypeTranslator $propertyTypeTranslator,
-		TermLookup $termLookup, string $labelLanguageCode ) {
+		TermLookup $termLookup, $labelLanguageCode ) {
 
 		$this->propertyInfoLookup = $propertyInfoLookup;
 		$this->propertyTypeTranslator = $propertyTypeTranslator;
@@ -59,7 +59,7 @@ class UserDefinedProperties {
 		}
 	}
 
-	private static function idFromWikibaseString( string $propertyId ): string {
+	private static function idFromWikibaseString( $propertyId ): string {
 		return  '___SWB_' . $propertyId;
 	}
 

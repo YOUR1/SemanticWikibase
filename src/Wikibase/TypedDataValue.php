@@ -8,10 +8,10 @@ use DataValues\DataValue;
 
 class TypedDataValue {
 
-	private DataValue $value;
-	private string $propertyType;
+	private $value;
+	private $propertyType;
 
-	public function __construct( string $propertyType, DataValue $value ) {
+	public function __construct( $propertyType, DataValue $value ) {
 		$this->value = $value;
 		$this->propertyType = $propertyType;
 	}
@@ -20,7 +20,7 @@ class TypedDataValue {
 		return $this->value;
 	}
 
-	public function getPropertyType(): string {
+	public function getPropertyType() {
 		return $this->propertyType;
 	}
 

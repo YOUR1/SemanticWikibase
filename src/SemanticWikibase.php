@@ -16,8 +16,8 @@ use Wikibase\Repo\WikibaseRepo;
 
 class SemanticWikibase {
 
-	protected static ?self $instance;
-	private Configuration $config;
+	protected static $instance;
+	private $config;
 
 	public static function getGlobalInstance(): self {
 		if ( !isset( self::$instance ) ) {

@@ -11,9 +11,9 @@ use SMWDataItem;
 
 class SemanticEntity {
 
-	private array $dataItemsPerProperty = [];
+	private $dataItemsPerProperty = [];
 
-	public function addPropertyValue( string $propertyId, SMWDataItem $dataItem ) {
+	public function addPropertyValue( $propertyId, SMWDataItem $dataItem ) {
 		$this->dataItemsPerProperty[$propertyId][] = $dataItem;
 	}
 
@@ -21,7 +21,7 @@ class SemanticEntity {
 	 * @param string $propertyId
 	 * @return SMWDataItem[]
 	 */
-	public function getDataItemsForProperty( string $propertyId ): array {
+	public function getDataItemsForProperty( $propertyId ): array {
 		return $this->dataItemsPerProperty[$propertyId] ?? [];
 	}
 

@@ -10,8 +10,8 @@ use Wikibase\DataModel\Entity\ItemId;
 
 class ItemTranslator {
 
-	private FingerprintTranslator $fingerprintTranslator;
-	private StatementListTranslator $statementListTranslator;
+	private $fingerprintTranslator;
+	private $statementListTranslator;
 
 	public function __construct( FingerprintTranslator $fingerprintTranslator, StatementListTranslator $statementListTranslator ) {
 		$this->fingerprintTranslator = $fingerprintTranslator;

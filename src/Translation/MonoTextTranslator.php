@@ -11,7 +11,7 @@ use SMWDIContainer;
 
 class MonoTextTranslator {
 
-	private DataValueFactory $dataValueFactory;
+	private $dataValueFactory;
 
 	public function __construct( DataValueFactory $dataValueFactory ) {
 		$this->dataValueFactory = $dataValueFactory;

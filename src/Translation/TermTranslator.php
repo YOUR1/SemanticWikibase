@@ -10,8 +10,8 @@ use Wikibase\DataModel\Term\Term;
 
 class TermTranslator {
 
-	private MonoTextTranslator $monoTextTranslator;
-	private DIWikiPage $subject;
+	private $monoTextTranslator;
+	private $subject;
 
 	public function __construct( MonoTextTranslator $monoTextTranslator, DIWikiPage $subject ) {
 		$this->monoTextTranslator = $monoTextTranslator;

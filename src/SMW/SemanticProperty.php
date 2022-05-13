@@ -6,27 +6,27 @@ namespace MediaWiki\Extension\SemanticWikibase\SMW;
 
 class SemanticProperty {
 
-	private string $id;
-	private string $type;
-	private string $label;
-	private ?string $alias;
+	private $id;
+	private $type;
+	private $label;
+	private $alias;
 
-	public function __construct( string $id, string $dvType, string $label, ?string $alias = null ) {
+	public function __construct( $id, $dvType, $label, $alias = null ) {
 		$this->id = $id;
 		$this->type = $dvType;
 		$this->label = $label;
 		$this->alias = $alias;
 	}
 
-	public function getId(): string {
+	public function getId() {
 		return $this->id;
 	}
 
-	public function getType(): string {
+	public function getType() {
 		return $this->type;
 	}
 
-	public function getLabel(): string {
+	public function getLabel() {
 		return $this->label;
 	}
 

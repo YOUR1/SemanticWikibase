@@ -13,9 +13,9 @@ use Wikibase\DataModel\Statement\Statement;
 
 class StatementTranslator {
 
-	private DataValueTranslator $dataValueTranslator;
-	private ContainerValueTranslator $containerValueTranslator;
-	private PropertyDataTypeLookup $propertyTypeLookup;
+	private $dataValueTranslator;
+	private $containerValueTranslator;
+	private $propertyTypeLookup;
 
 	public function __construct( DataValueTranslator $dataValueTranslator, ContainerValueTranslator $containerValueTranslator, PropertyDataTypeLookup $propertyTypeLookup ) {
 		$this->propertyTypeLookup = $propertyTypeLookup;

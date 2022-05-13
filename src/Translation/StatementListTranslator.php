@@ -12,8 +12,8 @@ use Wikibase\DataModel\Statement\StatementList;
 
 class StatementListTranslator {
 
-	private StatementTranslator $statementTranslator;
-	private DIWikiPage $subject;
+	private $statementTranslator;
+	private $subject;
 
 	public function __construct( StatementTranslator $statementTranslator, DIWikiPage $subject ) {
 		$this->statementTranslator = $statementTranslator;
@@ -52,7 +52,7 @@ class StatementListTranslator {
 		}
 	}
 
-	private function propertyIdForStatement( Statement $statement ): string {
+	private function propertyIdForStatement( Statement $statement ) {
 		return UserDefinedProperties::idFromWikibaseProperty( $statement->getPropertyId() );
 	}
 

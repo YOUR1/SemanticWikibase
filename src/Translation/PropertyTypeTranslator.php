@@ -12,7 +12,7 @@ use SMWTimeValue;
 
 class PropertyTypeTranslator {
 
-	public function canTranslate( string $wikibasePropertyType ): bool {
+	public function canTranslate( $wikibasePropertyType ): bool {
 		return array_key_exists( $wikibasePropertyType, $this->getMap() )
 			&& is_string( $this->getMap()[$wikibasePropertyType] );
 	}
@@ -24,7 +24,7 @@ class PropertyTypeTranslator {
 	 *
 	 * @return string SMW DataValue type ID
 	 */
-	public function translate( string $wikibasePropertyType ): string {
+	public function translate( $wikibasePropertyType ) {
 		return $this->getMap()[$wikibasePropertyType];
 	}
 

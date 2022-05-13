@@ -6,7 +6,7 @@ namespace MediaWiki\Extension\SemanticWikibase;
 
 class Configuration {
 
-	private array $mwGlobals;
+	private $mwGlobals;
 
 	private function __construct( array $mwGlobals ) {
 		$this->mwGlobals = $mwGlobals;
@@ -16,7 +16,7 @@ class Configuration {
 		return new self( $mwGlobals );
 	}
 
-	public function getLanguageCode(): string {
+	public function getLanguageCode() {
 		if ( $this->mwGlobals['wgSemanticWikibaseLanguage'] === '' ) {
 			return $this->mwGlobals['wgLanguageCode'];
 		}

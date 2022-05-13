@@ -18,9 +18,9 @@ use Wikibase\DataModel\Services\Lookup\PropertyLookup;
 
 class SemanticDataUpdate {
 
-	private TranslatorFactory $translatorFactory;
-	private ItemLookup $itemLookup;
-	private PropertyLookup $propertyLookup;
+	private $translatorFactory;
+	private $itemLookup;
+	private $propertyLookup;
 
 	public function __construct( TranslatorFactory $translatorFactory, ItemLookup $itemLookup, PropertyLookup $propertyLookup ) {
 		$this->translatorFactory = $translatorFactory;

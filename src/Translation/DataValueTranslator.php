@@ -103,7 +103,7 @@ class DataValueTranslator {
 		);
 	}
 
-	private function wbToSmwCalendarModel( string $wbCalendarModel ): int {
+	private function wbToSmwCalendarModel( $wbCalendarModel ): int {
 		$julianModel = 'http://www.wikidata.org/entity/Q1985786';
 		return $wbCalendarModel === $julianModel ? SMWDITime::CM_JULIAN : SMWDITime::CM_GREGORIAN;
 	}
